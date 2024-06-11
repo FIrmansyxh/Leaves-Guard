@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leaves Guard</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+
+    <!-- datepicker -->
+    <link rel="stylesheet" href="../assets/css/jquery.datetimepicker.css">
+
+    <!-- jquery ui -->
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+
+    <!-- common -->
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- animations -->
+    <link rel="stylesheet" href="../assets/css/animations.css">
+
+    <!-- welcome -->
+    <link rel="stylesheet" href="../assets/css/welcome.css">
+
+    <!-- home -->
+    <link rel="stylesheet" href="../assets/css/explore.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #uploadStatus {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body class="scrollbar-hidden">
+    <!-- splash-screen start -->
+    <section id="preloader" class="spalsh-screen">
+        <div class="circle text-center">
+            <div>
+                <h1>Leaves Guard</h1>
+                <p>Make your hydroponics healthier</p>
+            </div>
+        </div>
+        <div class="loader-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
+    <!-- splash-screen end -->
+
+    <main class="explore wishlist">
+        <!-- page-title -->
+        <div class="page-title">
+            <h3 class="main-title">Image Upload Form</h3>
+        </div>
+
+        <body>
+            <div class="container">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="photoLabel">Label Foto:</label>
+                        <input type="text" id="photoLabel" name="photoLabel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="photoFile">Pilih Foto:</label>
+                        <input type="file" id="photoFile" name="photoFile" accept="image/*" required>
+                    </div>
+                    <button type="submit">Upload</button>
+                </form>
+                <p id="uploadStatus"></p>
+            </div>
+
+            <!-- <script src="script.js"></script> -->
+        </body>
+
+        </section>
+        <!-- all-place end -->
+    </main>
+
+    <!-- bottom navigation start -->
+    <footer class="bottom-nav">
+        <ul class="d-flex align-items-center justify-content-around w-100 h-100">
+            <li>
+                <a href="home.html">
+                    <img src="../assets/svg/bottom-nav/home.svg" alt="home">
+                </a>
+            </li>
+            <li>
+                <a href="produk.html">
+                    <img src="../assets/svg/bottom-nav/category.svg" alt="category">
+                </a>
+            </li>
+            <li>
+                <a href="upload.html">
+                    <img src="../assets/svg/bottom-nav/upload-active.svg" alt="ticket">
+                </a>
+            </li>
+            <li>
+                <a href="history.html">
+                    <img src="../assets/svg/bottom-nav/histori.svg" alt="ticket">
+                </a>
+            </li>
+            <li>
+                <a href="artikel.html">
+                    <img src="../assets/svg/bottom-nav/artikel-active.svg" alt="heart">
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <!-- bottom navigation end -->
+    
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+  
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-storage-compat.js"></script>
+    <script src="../assets/js/firebase-config.js"></script>
+    <script src="../assets/js/firebase-upload.js"></script>
+
+    <!-- jquery -->
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jquery ui -->
+    <script src="../assets/js/jquery-ui.js"></script>
+
+    <!-- mixitup -->
+    <script src="../assets/js/mixitup.min.js"></script>
+
+    <!-- gasp -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+
+    <!-- draggable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/Draggable.min.js"></script>
+
+    <!-- swiper -->
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+
+    <!-- datepicker -->
+    <script src="../assets/js/jquery.datetimepicker.full.js"></script>
+
+    <!-- google-map api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCodvr4TmsTJdYPjs_5PWLPTNLA9uA4iq8&callback=initMap"
+        type="text/javascript"></script>
+
+    <!-- script -->
+    <script src="../assets/js/script.js"></script>
+
+    <!-- <script>
+        document.getElementById('uploadForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var form = this;
+            var formData = new FormData(form);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('POST', 'upload.php', true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        document.getElementById('uploadStatus').innerText = 'Upload sukses!';
+                        form.reset();
+                    } else {
+                        document.getElementById('uploadStatus').innerText = 'Upload gagal. Silakan coba lagi.';
+                    }
+                }
+            };
+
+            xhr.send(formData);
+        });
+
+    </script> -->
+</body>
+
+</html>

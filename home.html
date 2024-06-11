@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Leaves Guard</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+
+  <!-- datepicker -->
+  <link rel="stylesheet" href="../assets/css/jquery.datetimepicker.css">
+
+  <!-- jquery ui -->
+  <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
+
+  <!-- common -->
+  <link rel="stylesheet" href="../assets/css/common.css">
+
+  <!-- animations -->
+  <link rel="stylesheet" href="../assets/css/animations.css">
+
+  <!-- welcome -->
+  <link rel="stylesheet" href="../assets/css/welcome.css">
+
+  <!-- home -->
+  <link rel="stylesheet" href="../assets/css/home.css">
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      width: 300px;
+    }
+
+    .grid-container>div {
+      width: 150px;
+      height: 150px;
+    }
+
+    .cuaca {
+      padding-bottom: 10%;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 30px;
+      color: #39965c;
+      text-align: center;
+    }
+
+    .box1 {
+      width: 150px;
+      height: 150px;
+      background: green;
+    }
+  </style>
+</head>
+
+<body class="scrollbar-hidden">
+  <!-- splash-screen start -->
+  <section id="preloader" class="spalsh-screen">
+    <div class="circle text-center">
+      <div>
+        <h1>Leaves Guard</h1>
+        <p>Make your hydroponics healthier</p>
+      </div>
+    </div>
+    <div class="loader-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </section>
+  <!-- splash-screen end -->
+
+  <main class="home">
+    <!-- menu, side-menu start -->
+    <section class="wrapper dz-mode">
+      <!-- menu -->
+      <div class="menu">
+        <button class="toggle-btn">
+          <img src="../assets/svg/menu/burger-white.svg" alt="" class="icon">
+        </button>
+        <div class="btn-grp d-flex align-items-center gap-16">
+          <label for="mode-change" class="mode-change d-flex align-items-center justify-content-center">
+            <input type="checkbox" id="mode-change">
+            <img src="../assets/svg/menu/sun-white.svg" alt="icon" class="sun">
+            <img src="../assets/svg/menu/moon-white.svg" alt="icon" class="moon">
+          </label>
+          <a href="./profile/user-profile.html">
+            <img src="../assets/svg/menu/profile-white.svg" alt="icon">
+          </a>
+        </div>
+      </div>
+      <div class="m-menu__overlay"></div>
+      <!-- main menu -->
+      <div class="m-menu">
+        <div class="m-menu__header">
+          <button class="m-menu__close">
+            <img src="../assets/svg/menu/close-white.svg" alt="icon">
+          </button>
+        </div>
+        <ul>
+          <li>
+            <h2 class="menu-title">menu</h2>
+          </li>
+
+          <li>
+            <a href="home.html">
+              <div class="d-flex align-items-center gap-16">
+                <span class="icon">
+                  <img src="../assets/svg/menu/pie-white.svg" alt="">
+                </span>
+                overview
+              </div>
+              <img src="../assets/svg/menu/chevron-right-black.svg" alt="">
+            </a>
+          </li>
+          <li>
+            <h2 class="menu-title">others</h2>
+          </li>
+
+          <li>
+            <label class="a-label__chevron" for="item-4">
+              <span class="d-flex align-items-center gap-16">
+                <span class="icon">
+                  <img src="../assets/svg/menu/grid-white.svg" alt="">
+                </span>
+                components
+              </span>
+              <img src="../assets/svg/menu/chevron-right-black.svg" alt="">
+            </label>
+            <input type="checkbox" id="item-4" name="item-4" class="m-menu__checkbox">
+            <div class="m-menu">
+              <div class="m-menu__header">
+                <label class="m-menu__toggle" for="item-4">
+                  <img src="../assets/svg/menu/back-white.svg" alt="">
+                </label>
+                <span class="m-menu__header-title">components</span>
+              </div>
+              <ul>
+                <li>
+                  <a href="../components/splash-screen.html">
+                    <div class="d-flex align-items-center gap-16">
+                      <span class="icon">
+                        <img src="../assets/svg/menu/box-white.svg" alt="icon">
+                      </span>
+                      splash screen
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <label class="a-label__chevron" for="item-5">
+              <span class="d-flex align-items-center gap-16">
+                <span class="icon">
+                  <img src="../assets/svg/menu/gear-white.svg" alt="">
+                </span>
+                settings
+              </span>
+              <img src="../assets/svg/menu/chevron-right-black.svg" alt="">
+            </label>
+            <input type="checkbox" id="item-5" name="item-5" class="m-menu__checkbox">
+            <div class="m-menu">
+              <div class="m-menu__header">
+                <label class="m-menu__toggle" for="item-5">
+                  <img src="../assets/svg/menu/back-white.svg" alt="">
+                </label>
+                <span class="m-menu__header-title">settings</span>
+              </div>
+              <ul>
+                <li>
+                  <a href="./profile/change-password.html">
+                    <div class="d-flex align-items-center gap-16">
+                      <span class="icon">
+                        <img src="../assets/svg/menu/box-white.svg" alt="icon">
+                      </span>
+                      Change Password
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="./profile/forgot-password.html">
+                    <div class="d-flex align-items-center gap-16">
+                      <span class="icon">
+                        <img src="../assets/svg/menu/box-white.svg" alt="icon">
+                      </span>
+                      Forgot Password
+                    </div>
+                  </a>
+                </li>
+                <li>
+              </ul>
+            </div>
+          </li>
+          <li class="dz-switch">
+            <div class="a-label__chevron">
+              <div class="d-flex align-items-center gap-16">
+                <span class="icon">
+                  <img src="../assets/svg/menu/moon-white.svg" alt="">
+                </span>
+                switch to dark mode
+              </div>
+              <label class="toggle-switch" for="enableMode">
+                <input type="checkbox" id="enableMode" class="mode-switch">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- end main menu -->
+    </section>
+    <!-- menu, side-menu end -->
+
+    <!-- info start -->
+    <section class="info d-flex align-items-start justify-content-between pb-12">
+      <div class="d-flex align-items-center justify-content-between gap-14">
+        <div class="image shrink-0 rounded-full overflow-hidden">
+          <img src="../assets/images/home/avatar.png" alt="avatar" class="w-100 h-100 object-fit-cover">
+        </div>
+        <div>
+          <h3>Hi, Firmansyah</h3>
+        </div>
+      </div>
+    </section>
+    <!-- info end -->
+    <!-- weather API start -->
+    <div class="box1" id="weatherData"></div>
+
+    <div class="grid-container">
+      <div><img src="../assets/images/cuaca/30.png"></div>
+      <div><img src="../assets/images/cuaca/berawan.png"></div>
+    </div>
+    <div class="cuaca">Berawan</div>
+
+    <!-- weather API end -->
+
+    <!-- Produk AB MIX start -->
+    <section class="visited py-12">
+      <!-- title -->
+      <div class="title d-flex align-items-center justify-content-between">
+        <h2 class="shrink-0">Rekomendasi AB Mix</h2>
+        <div class="custom-pagination visited-pagination"></div>
+      </div>
+
+      <div class="swiper visited-swiper">
+        <div class="swiper-wrapper">
+          <!-- item-1 -->
+          <div class="swiper-slide place-card">
+            <a href="abmix-1.html">
+              <div class="image position-relative">
+                <img src="../assets/images/home/abmix-1.png" alt="desert"
+                  class="img-fluid w-100 overflow-hidden radius-8">
+              </div>
+              <div class="content">
+                <h4>Infarm Nutrisi AB Mix Besar Organik untuk 1000 Liter</h4>
+                <p class="d-flex align-items-center gap-04 location">
+                  <img src="../assets/svg/map-marker.svg" alt="icon">
+                  Kota Jakarta Barat
+                </p>
+                <div class="price d-flex align-items-center justify-content-between">
+                  <h3>Rp125.000</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- item-2 -->
+          <div class="swiper-slide place-card">
+            <a href="abmix-2.html">
+              <div class="image position-relative">
+                <img src="../assets/images/home/abmix-2.png" alt="desert"
+                  class="img-fluid w-100 overflow-hidden radius-8">
+              </div>
+              <div class="content">
+                <h4>Infarm Nutrisi AB Mix Selada Pupuk Organik</h4>
+                <p class="d-flex align-items-center gap-04 location">
+                  <img src="../assets/svg/map-marker.svg" alt="icon">
+                  Kota Jakarta Barat
+                </p>
+                <div class="price d-flex align-items-center justify-content-between">
+                  <h3>Rp30.000</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- item-3 -->
+          <div class="swiper-slide place-card">
+            <a href="abmix-3.html">
+              <div class="image position-relative">
+                <img src="../assets/images/home/abmix-3.png" alt="desert"
+                  class="img-fluid w-100 overflow-hidden radius-8">
+              </div>
+              <div class="content">
+                <h4>Nutrisi AB MIX PRO Sayuran Daun Siap Pakai 5L</h4>
+                <p class="d-flex align-items-center gap-04 location">
+                  <img src="../assets/svg/map-marker.svg" alt="icon">
+                  Kota Surakarta
+                </p>
+                <div class="price d-flex align-items-center justify-content-between">
+                  <h3>Rp95.000</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- item-4 -->
+          <div class="swiper-slide place-card">
+            <a href="abmix-4.html">
+              <div class="image position-relative">
+                <img src="../assets/images/home/abmix-4.png" alt="desert"
+                  class="img-fluid w-100 overflow-hidden radius-8">
+              </div>
+              <div class="content">
+                <h4>nutrisi hidroponik ab mix sayuran daun- 250gr 100 liter</h4>
+                <p class="d-flex align-items-center gap-04 location">
+                  <img src="../assets/svg/map-marker.svg" alt="icon">
+                  Jakarta Timur
+                </p>
+                <div class="price d-flex align-items-center justify-content-between">
+                  <h3>Rp30.300</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Produk AB Mix end -->
+
+    <!-- Hidroponik Set start -->
+    <section class="visited py-12">
+      <!-- title -->
+      <div class="title d-flex align-items-center justify-content-between">
+        <h2 class="shrink-0">Hidroponik Set </h2>
+        <div class="custom-pagination visited-pagination"></div>
+      </div>
+
+      <div class="swiper visited-swiper">
+        <div class="swiper-wrapper">
+          <!-- item-1 -->
+          <div class="swiper-slide place-card">
+            <a href="vacation-details.html">
+              <div class="image position-relative">
+                <img src="../assets/images/home/item-1.png" alt="desert"
+                  class="img-fluid w-100 overflow-hidden radius-8">
+              </div>
+              <div class="content">
+                <h4>Infarm Nutrisi AB Mix Besar Organik untuk 1000 Liter</h4>
+                <p class="d-flex align-items-center gap-04 location">
+                  <img src="../assets/svg/map-marker.svg" alt="icon">
+                  DKI Jakarta, Kota Jakarta Barat
+                </p>
+                <div class="price d-flex align-items-center justify-content-between">
+                  <h3>Rp125.000</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- item-2 -->
+          <div class="swiper-slide place-card">
+            <a href="vacation-details.html">
+              <div class="image position-relative">
+                <img src="../assets/images/home/item-2.png" alt="desert"
+                  class="img-fluid w-100 overflow-hidden radius-8">
+                <span class="d-flex align-items-center justify-content-center rounded-full">
+                  <img src="../assets/svg/heart-black.svg" alt="icon">
+                </span>
+              </div>
+              <div class="content">
+                <h4>Infarm Nutrisi AB Mix Selada Pupuk Organik</h4>
+                <p class="d-flex align-items-center gap-04 location">
+                  <img src="../assets/svg/map-marker.svg" alt="icon">
+                  DKI Jakarta, Kota Jakarta Barat
+                </p>
+                <div class="price d-flex align-items-center justify-content-between">
+                  <h3>Rp30.000</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- item-3 -->
+          <div class="swiper-slide place-card">
+            <a href="vacation-details.html">
+              <div class="image position-relative">
+                <img src="../assets/images/home/item-1.png" alt="desert"
+                  class="img-fluid w-100 overflow-hidden radius-8">
+                <span class="d-flex align-items-center justify-content-center rounded-full">
+                  <img src="../assets/svg/heart-red.svg" alt="icon">
+                </span>
+              </div>
+              <div class="content">
+                <h4>Tahiti Beach</h4>
+                <p class="d-flex align-items-center gap-04 location">
+                  <img src="../assets/svg/map-marker.svg" alt="icon">
+                  Polynesia, French
+                </p>
+                <div class="price d-flex align-items-center justify-content-between">
+                  <h3>$235</h3>
+                  <p class="d-flex align-items-center gap-04">
+                    <img src="../assets/svg/star-yellow.svg" alt="icon">
+                    4.4 <span>(32)</span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- item-4 -->
+          <div class="swiper-slide place-card">
+            <a href="vacation-details.html">
+              <div class="image position-relative">
+                <img src="../assets/images/home/item-2.png" alt="desert"
+                  class="img-fluid w-100 overflow-hidden radius-8">
+                <span class="d-flex align-items-center justify-content-center rounded-full">
+                  <img src="../assets/svg/heart-black.svg" alt="icon">
+                </span>
+              </div>
+              <div class="content">
+                <h4>St. Lucia Mountain</h4>
+                <p class="d-flex align-items-center gap-04 location">
+                  <img src="../assets/svg/map-marker.svg" alt="icon">
+                  South America
+                </p>
+                <div class="price d-flex align-items-center justify-content-between">
+                  <h3>$235</h3>
+                  <p class="d-flex align-items-center gap-04">
+                    <img src="../assets/svg/star-yellow.svg" alt="icon">
+                    4.4 <span>(41)</span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Hidroponik Set end -->
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+  <script src="../assets/js/firebase-config.js"></script>
+  <script>
+    // Fungsi untuk mendapatkan data cuaca dari BMKG JSON API
+    function getWeatherData() {
+      const apiUrl = 'https://ibnux.github.io/BMKG-importer/cuaca/wilayah.json';
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          // Cari data cuaca untuk kota yang dipilih
+          const cityData = data.find(item => item.kota === "Kab. Pamekasan");
+
+          if (cityData) {
+            // Proses data cuaca untuk kota yang dipilih
+            const weatherInfo = {
+              city: cityData.kota,
+              temperature: cityData.suhu,
+              weather: cityData.cuaca
+            };
+
+            // Menampilkan data cuaca di HTML
+            const weatherDataDiv = document.getElementById('weatherData');
+            weatherDataDiv.innerHTML = `
+                          <p>City: ${weatherInfo.city}</p>
+                          <p>Temperature: ${weatherInfo.temperature}°C</p>
+                          <p>Weather: ${weatherInfo.weather}</p>
+                      `;
+          } else {
+            console.error('City data not found');
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching weather data:', error);
+        });
+    }
+
+    // Panggil fungsi untuk mendapatkan data cuaca saat halaman dimuat (secara default menampilkan cuaca untuk Jakarta)
+    window.addEventListener('load', () => getWeatherData());
+  </script>
+
+
+
+  <!-- bottom navigation start -->
+  <footer class="bottom-nav">
+    <ul class="d-flex align-items-center justify-content-around w-100 h-100">
+      <li>
+        <a href="home.html">
+          <img src="../assets/svg/bottom-nav/home-active.svg" alt="home">
+        </a>
+      </li>
+      <li>
+        <a href="produk.html">
+          <img src="../assets/svg/bottom-nav/category.svg" alt="category">
+        </a>
+      </li>
+      <li>
+        <a href="upload.html">
+          <img src="../assets/svg/bottom-nav/upload.svg" alt="ticket">
+        </a>
+      </li>
+      <li>
+        <a href="history.html">
+          <img src="../assets/svg/bottom-nav/histori.svg" alt="ticket">
+        </a>
+      </li>
+      <li>
+        <a href="artikel.html">
+          <img src="../assets/svg/bottom-nav/artikel.svg" alt="heart">
+        </a>
+      </li>
+    </ul>
+  </footer>
+  <!-- bottom navigation end -->
+
+  <!-- jquery -->
+  <script src="../assets/js/jquery-3.6.1.min.js"></script>
+
+  <!-- bootstrap -->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- jquery ui -->
+  <script src="../assets/js/jquery-ui.js"></script>
+
+  <!-- mixitup -->
+  <script src="../assets/js/mixitup.min.js"></script>
+
+  <!-- gasp -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+
+  <!-- draggable -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/Draggable.min.js"></script>
+
+  <!-- swiper -->
+  <script src="../assets/js/swiper-bundle.min.js"></script>
+
+  <!-- datepicker -->
+  <script src="../assets/js/jquery.datetimepicker.full.js"></script>
+
+  <!-- google-map api -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCodvr4TmsTJdYPjs_5PWLPTNLA9uA4iq8&callback=initMap"
+    type="text/javascript"></script>
+
+  <!-- script -->
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Leaves Guard</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+  <!-- datepicker -->
+  <link rel="stylesheet" href="assets/css/jquery.datetimepicker.css">
+
+  <!-- common -->
+  <link rel="stylesheet" href="assets/css/common.css">
+
+  <!-- animations -->
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <!-- welcome -->
+  <link rel="stylesheet" href="assets/css/welcome.css">
+</head>
+
+<body class="scrollbar-hidden">
+  <!-- splash-screen start -->
+  <section id="preloader" class="spalsh-screen">
+    <div class="circle text-center">
+      <div>
+        <h1>Leaves Guard</h1>
+        <p>Make your hydroponics healthier</p>
+      </div>
+    </div>
+    <div class="loader-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </section>
+  <!-- splash-screen end -->
+
+  <main>
+    <!-- onboarding start -->
+    <section class="onboarding">
+      <div class="swiper onboarding-swiper">
+        <div class="swiper-wrapper">
+          <!-- item-1 -->
+          <div class="swiper-slide">
+            <div class="image position-relative">
+              <img src="assets/images/onboarding/slide-1.png" alt="Slide" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="content text-center">
+              <h2>Check the health of your plants with just a scan</h2>
+              <p>Register and login to your account now to enjoy the full features of the Leaves Guard app.
+              </p>
+            </div>
+          </div>
+
+          <!-- item-2 -->
+          <div class="swiper-slide">
+            <div class="image position-relative">
+              <img src="assets/images/onboarding/slide-2.png" alt="Slide" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="content text-center">
+              <h2>Maintain the quality of hydroponic plants</h2>
+              <p>Get better yields by maintaining the quality of your plants, with nutrient checks on hydroponic plants.
+              </p>
+            </div>
+          </div>
+
+          <!-- item-3 -->
+          <div class="swiper-slide">
+            <div class="image position-relative">
+              <img src="assets/images/onboarding/slide-3.png" alt="Slide" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="content text-center">
+              <h2>Level up your garden with the Leaves Guard app</h2>
+              <p>Unleash the full potential of your garden with the Leaves Guard app, the all-in-one solution to check the condition of your plants.
+              </p>
+            </div>
+          </div>
+
+          <!-- item-4 -->
+          <div class="swiper-slide">
+            <div class="image position-relative">
+              <img src="assets/images/onboarding/welcome.png" alt="Slide" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="content text-center">
+              <h2>Login now and get all the benefits</h2>
+              <p>Take advantage of all the features in the Leaves Guard app by registering and logging into your account now.</p>
+              <a href="pages/auth/signin.html" class="btn-primary btn-get-started">Get Started</a>
+              <h6>Don’t have an account? <a href="pages/auth/signup.html">Register</a></h6>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="slider-footer">
+        <div class="row align-items-center">
+          <div class="col-6">
+            <button type="button" class="skip-btn">
+              <img src="assets/svg/arrow-circle.svg" alt="Arrow">
+              Skip
+            </button>
+          </div>
+          <div class="col-6">
+            <div class="custom-pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- onboarding end -->
+  </main>
+  
+  <!-- firebase script -->
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-database-compat.js"></script>
+  
+  <script src="assets/js/firebase-config.js"></script>
+  <script src="assets/js/firebase-script.js"></script>
+  <script>
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        var uid = user.uid;
+        window.location.href = "../../pages/home.html";
+        
+      }
+    });
+  </script>
+  
+  
+  <!-- jquery -->
+  <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+  <!-- bootstrap -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- jquery ui -->
+  <script src="assets/js/jquery-ui.js"></script>
+
+  <!-- mixitup -->
+  <script src="assets/js/mixitup.min.js"></script>
+
+  <!-- gasp -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+
+  <!-- draggable -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/Draggable.min.js"></script>
+
+  <!-- swiper -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+
+  <!-- datepicker -->
+  <script src="assets/js/jquery.datetimepicker.full.js"></script>
+
+  <!-- google-map api -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3vI4IQqzxRU1449lbIHThUb2gCeDW47w&callback=initMap"
+    type="text/javascript"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCodvr4TmsTJdYPjs_5PWLPTNLA9uA4iq8&callback=initMap"
+    type="text/javascript"></script> -->
+
+  <!-- script -->
+  <script src="assets/js/script.js"></script>
+  
+  
+</body>
+
+</html>

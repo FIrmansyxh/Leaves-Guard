@@ -1,0 +1,230 @@
+<?php
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Leaves Guard</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon" />
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+
+    <!-- JQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
+
+    <!-- datepicker -->
+    <link rel="stylesheet" href="../assets/css/jquery.datetimepicker.css" />
+
+    <!-- jquery ui -->
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- common -->
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    <!-- animations -->
+    <link rel="stylesheet" href="../assets/css/animations.css" />
+
+    <!-- welcome -->
+    <link rel="stylesheet" href="../assets/css/welcome.css" />
+
+    <!-- home -->
+    <link rel="stylesheet" href="../assets/css/explore.css" />
+  </head>
+
+  <body class="scrollbar-hidden">
+    <!-- splash-screen start -->
+    <section id="preloader" class="spalsh-screen">
+      <div class="circle text-center">
+        <div>
+          <h1>Leaves Guard</h1>
+          <p>Make your hydroponics healthier</p>
+        </div>
+      </div>
+      <div class="loader-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+    <!-- splash-screen end -->
+
+    <main class="explore">
+      <!-- all-place start -->
+      <section class="all-place py-12">
+        <!-- tab list -->
+        <ul class="place-filter-btns d-flex align-items-center tab-list gap-12 w-100 scrollbar-hidden">
+          <li class="active">
+            <button type="button" data-filter="all">All</button>
+          </li>
+          <li>
+            <button type="button" data-filter=".abmix">AB Mix</button>
+          </li>
+          <li>
+            <button type="button" data-filter=".set">Hidroponik Set</button>
+          </li>
+          <li>
+            <button type="button" data-filter=".frequent">Frequently visited</button>
+          </li>
+        </ul>
+
+        <!-- places -->
+        <div id="place-cards" class="grid">
+          <!-- item-1 -->
+          <div class="place-card mix abmix frequent">
+            <a href="abmix-1.html">
+              <div class="image position-relative">
+                <img
+                  src="../assets/images/home/abmix-1.png"
+                  alt="desert"
+                  class="img-fluid w-100 overflow-hidden radius-8"
+                />
+              </div>
+              <div class="content">
+                <h4>Infarm Nutrisi AB Mix Besar Organik untuk 1000 Liter</h4>
+                <p class="d-flex align-items-center gap-04 location">
+                  <img src="../assets/svg/map-marker.svg" alt="icon" />
+                  Kota Jakarta Barat
+                </p>
+                <div class="price d-flex align-items-center justify-content-between">
+                  <h3>Rp125.000</h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- all-place end -->
+    </main>
+
+    <!-- bottom navigation start -->
+    <footer class="bottom-nav">
+      <ul class="d-flex align-items-center justify-content-around w-100 h-100">
+        <li>
+          <a href="home.html">
+            <img src="../assets/svg/bottom-nav/home.svg" alt="home" />
+          </a>
+        </li>
+        <li>
+          <a href="explore.html">
+            <img src="../assets/svg/bottom-nav/category-active.svg" alt="category" />
+          </a>
+        </li>
+        <li>
+          <a href="upload.html">
+            <img src="../assets/svg/bottom-nav/upload.svg" alt="ticket" />
+          </a>
+        </li>
+        <li>
+          <a href="history.html">
+            <img src="../assets/svg/bottom-nav/histori.svg" alt="ticket" />
+          </a>
+        </li>
+        <li>
+          <a href="artikel.html">
+            <img src="../assets/svg/bottom-nav/artikel.svg" alt="heart" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- bottom navigation end -->
+
+    <!-- jquery -->
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jquery ui -->
+    <script src="../assets/js/jquery-ui.js"></script>
+
+    <!-- mixitup -->
+    <script src="../assets/js/mixitup.min.js"></script>
+
+    <!-- gasp -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+
+    <!-- draggable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/Draggable.min.js"></script>
+
+    <!-- swiper -->
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+
+    <!-- datepicker -->
+    <script src="../assets/js/jquery.datetimepicker.full.js"></script>
+
+    <!-- google-map api -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCodvr4TmsTJdYPjs_5PWLPTNLA9uA4iq8&callback=initMap"
+      type="text/javascript"
+    ></script>
+
+    <!-- script -->
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function () {
+        getProduct();
+      });
+      function getProduct() {
+        $("#place-cards").empty();
+        $.ajax({
+          type: "GET",
+          url: "http://localhost/preview/api.php",
+          dataType: "json",
+          success: function (response) {
+            $.each(response, function (key, value) {
+              $("#place-cards").append(
+                '<div class="place-card mix abmix frequent">' +
+                  '<a href="produk_detail.php?id='+ value.id +'">' +
+                  '<div class="image position-relative">' +
+                  '<img src="../assets/images/products/'+ value.photo +'" alt="desert" class="img-fluid w-100 overflow-hidden radius-8"/>' +
+                  "</div>" +
+                  '<div class="content">' +
+                  "<h4>"+ value.name +"</h4>" +
+                  '<p class="d-flex align-items-center gap-04 location">' +
+                  '<img src="../assets/svg/map-marker.svg" alt="icon" />' +
+                  value.location +
+                  "</p>" +
+                  '<div class="price d-flex align-items-center justify-content-between">' +
+                  "<h3>Rp"+ value.price +"</h3>" +
+                  "</div>" +
+                  "</div>" +
+                  "</a>" +
+                  "</div>"
+              );
+            });
+          },
+          error: function (error) {
+            console.log("Error fetching news:", error);
+          },
+        });
+      }
+    </script>
+  </body>
+</html>

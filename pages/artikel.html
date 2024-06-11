@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Leaves Guard</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon" />
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+
+    <!-- JQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
+
+    <!-- datepicker -->
+    <link rel="stylesheet" href="../assets/css/jquery.datetimepicker.css" />
+
+    <!-- jquery ui -->
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- common -->
+    <link rel="stylesheet" href="../assets/css/common.css" />
+
+    <!-- animations -->
+    <link rel="stylesheet" href="../assets/css/animations.css" />
+
+    <!-- welcome -->
+    <link rel="stylesheet" href="../assets/css/welcome.css" />
+
+    <!-- home -->
+    <link rel="stylesheet" href="../assets/css/explore.css" />
+  </head>
+  <body class="scrollbar-hidden">
+    <!-- splash-screen start -->
+    <section id="preloader" class="spalsh-screen">
+      <div class="circle text-center">
+        <div>
+          <h1>Leaves Guard</h1>
+          <p>Make your hydroponics healthier</p>
+        </div>
+      </div>
+      <div class="loader-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+    <!-- splash-screen end -->
+
+    <main class="explore wishlist">
+      <!-- page-title -->
+      <div class="page-title">
+        <h3 class="main-title">Artikel</h3>
+      </div>
+
+      <!-- all-place start -->
+      <section id="container-news" class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4"></section>
+      <!-- all-place end -->
+    </main>
+
+    <!-- bottom navigation start -->
+    <footer class="bottom-nav">
+      <ul class="d-flex align-items-center justify-content-around w-100 h-100">
+        <li>
+          <a href="home.html">
+            <img src="../assets/svg/bottom-nav/home.svg" alt="home" />
+          </a>
+        </li>
+        <li>
+          <a href="produk.html">
+            <img src="../assets/svg/bottom-nav/category.svg" alt="category" />
+          </a>
+        </li>
+        <li>
+          <a href="upload.html">
+            <img src="../assets/svg/bottom-nav/upload.svg" alt="ticket" />
+          </a>
+        </li>
+        <li>
+          <a href="history.html">
+            <img src="../assets/svg/bottom-nav/histori.svg" alt="ticket" />
+          </a>
+        </li>
+        <li>
+          <a href="wishlist.html">
+            <img src="../assets/svg/bottom-nav/artikel-active.svg" alt="heart" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <!-- bottom navigation end -->
+
+    <!-- jquery -->
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jquery ui -->
+    <script src="../assets/js/jquery-ui.js"></script>
+
+    <!-- mixitup -->
+    <script src="../assets/js/mixitup.min.js"></script>
+
+    <!-- gasp -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+
+    <!-- draggable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/Draggable.min.js"></script>
+
+    <!-- swiper -->
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+
+    <!-- datepicker -->
+    <script src="../assets/js/jquery.datetimepicker.full.js"></script>
+
+    <!-- google-map api -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCodvr4TmsTJdYPjs_5PWLPTNLA9uA4iq8&callback=initMap"
+      type="text/javascript"
+    ></script>
+
+    <!-- script -->
+    <script src="../assets/js/script.js"></script>
+    <script>
+      $(document).ready(function () {
+        getNews();
+      });
+      function getNews() {
+        $("#container-news").empty();
+        $.ajax({
+          type: "GET",
+          url: "https://newsapi.org/v2/everything?q=plants&apiKey=829761b4e9fc4bbb8b68b138149b43b1&pageSize=10&page=1",
+          dataType: "json",
+          success: function (response) {
+            console.log('hallo dek');
+            $.each(response.articles, function (key, value) {
+              $("#container-news").append(
+                '<a href="' +
+                  value.url +
+                  '">' +
+                  '<img src="' +
+                  value.urlToImage +
+                  '" class="rounded-lg">' +
+                  '<p class="text-xs mt-2">' +
+                  value.author +
+                  "</p>" +
+                  '<p class="text-sm font-semibold">' +
+                  value.title +
+                  "</p>" +
+                  "</a>"
+              );
+            });
+          },
+          error: function (error) {
+            console.log("Error fetching news:", error);
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
